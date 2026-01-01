@@ -35,7 +35,7 @@ header {
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    padding: 15px 5%;
+    padding: 20px 5%; /* Increased from 15px to accommodate larger logo */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,9 +49,9 @@ header {
 }
 
 .logo-image {
-    height: 50px;
+    height: 80px; /* Increased from 50px - 60% larger */
     width: auto;
-    max-width: 200px;
+    max-width: 250px; /* Increased from 200px */
     object-fit: contain;
 }
 
@@ -120,7 +120,7 @@ nav ul li a:hover::after {
     text-align: center;
     color: white;
     padding: 0 20px;
-    margin-top: 70px;
+    margin-top: 90px; /* Increased from 70px to accommodate larger header */
 }
 
 .hero-content {
@@ -420,9 +420,9 @@ footer {
 }
 
 .footer-logo-image {
-    height: 60px;
+    height: 90px; /* Increased from 60px - 50% larger */
     width: auto;
-    max-width: 250px;
+    max-width: 300px; /* Increased from 250px */
     object-fit: contain;
 }
 
@@ -493,7 +493,7 @@ footer {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        padding: 15px;
+        padding: 20px 15px; /* Increased padding */
     }
     
     nav {
@@ -507,7 +507,7 @@ footer {
     }
     
     .hero {
-        margin-top: 140px;
+        margin-top: 180px; /* Increased for mobile to accommodate larger header */
     }
     
     .hero h1 {
@@ -536,7 +536,11 @@ footer {
         padding: 30px 20px;
     }
     
-    .logo-image, .footer-logo-image {
-        height: 40px;
+    .logo-image {
+        height: 60px;
+    }
+    
+    .footer-logo-image {
+        height: 70px;
     }
 }
