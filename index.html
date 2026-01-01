@@ -3,13 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>HomeStead Construction</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="https://via.placeholder.com/200x50/2ecc71/ffffff?text=YOUR+LOGO+HERE" alt="Construction Company Logo" class="logo-image" id="headerLogo"> 
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+        <button class="btn btn-primary" id="contactScrollBtn">Contact Us</button>
+    </header>
+    <main id="main-content">
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>short intro</h1>
+                <p>paragraph</p>
+                <button class="btn btn-primary" id="learnMoreBtn">Learn More</button>
+            </div>
+        </section>
+        <section class="section" id="about">
+            <div class="section-title">
+                <h2>about</h2>
+                <p>about words</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>about</h3>
+                    <p>intro paragraph break 1</p>
+                    <p>intro paragraph break 2</p>
+                    <p>intro pararaph break 3</p>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1503387769-00a112127ca0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construction Site">
+                </div>
+            </div>
+        </section>
+        <section class="section services" id="services">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive construction solutions for every need</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    </div>
+                    <div class="service-content">
+                        <h3>service</h3>
+                        <p>service description</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon icon-building">
+                    </div>
+                    <div class="service-content">
+                        <h3>service</h3>
+                        <p>service description</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon icon-factory">
+                    </div>
+                    <div class="service-content">
+                        <h3>service</h3>
+                        <p>service description</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="section" id="contact">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for your construction needs</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>Send us a message</h3>
+                    
+                    <!-- Success Message (Hidden by default) -->
+                    <div class="form-success" id="successMessage">
+                        <div class="icon-check" style="font-size: 2rem; margin-bottom: 10px;"></div>
+                        <h4>Message Sent Successfully!</h4>
+                        <p>Thank you for contacting us. Your message has been sent to 123@abc.com. We'll respond as soon as possible.</p>
+                    </div>
+                    
+                    <!-- Formspree Form -->
+                    <form action="https://formspree.io/f/xykzkokp" method="POST" id="contactForm">
+                        <!-- Formspree Configuration -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission from Construction Website">
+                        <input type="hidden" name="_replyto" id="replytoInput">
+                        <input type="hidden" name="_cc" value="abc@123.com">
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="your.email@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="(123) 456-7890">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="project">Project Type *</label>
+                            <select id="project" name="project" class="form-control" required>
+                                <option value="" disabled selected>Select a project type</option>
+                                <option value="residential">option 1</option>
+                                <option value="commercial">option 2</option>
+                                <option value="industrial">option 3</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <span id="submitText">Send Message</span>
+                            <div id="loadingSpinner" style="display: none;">
+                                Sending...
+                            </div>
+                        </button>
+                        
+                        <p style="text-align: center; margin-top: 15px; color: var(--gray); font-size: 0.9rem;">
+                            <span class="icon-info"></span> Your message will be sent directly to our email.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo-section">
+                <div class="footer-logo">
+                    <img src="https://via.placeholder.com/250x60/2ecc71/ffffff?text=YOUR+LOGO+HERE" class="footer-logo-image" id="footerLogo">
+                </div>
+                <p class="footer-about">about?</p>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <ul class="contact-details">
+                    <li><span class="icon icon-location"></span> undecided address</li>
+                    <li><span class="icon icon-phone"></span> maybe a business number?</li>
+                    <li><span class="icon icon-email"></span> who's email?</li>
+                    <li><span class="icon icon-clock"></span> 营业时间</li>
+                </ul>
+            </div>
+            
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 HomeStead Construction. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-<script>
-//script
-</script>
